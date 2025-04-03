@@ -15,4 +15,11 @@ public class DS2874 {
             return res;
         }
     }
+
+    public static void main(String[] args) {
+        DS2874 ds2874 = new DS2874();
+        Solution solution = ds2874.new Solution();
+        int[] nums = { 1, 2, 3, 4, 5 };
+        System.out.println(solution.maximumTripletValue(nums)); // Output: 6
+    }
 }
