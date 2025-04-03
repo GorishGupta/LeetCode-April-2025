@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DS2140 {
     public long mostPoints(int[][] questions) {
         int n = questions.length;
