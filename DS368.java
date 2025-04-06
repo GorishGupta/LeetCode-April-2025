@@ -28,4 +28,12 @@ public class DS368 {
             return res;
         }
     }
+
+    public static void main(String[] args) {
+        DS368 ds368 = new DS368();
+        Solution solution = ds368.new Solution();
+        int[] nums = { 1, 2, 3, 4, 6 };
+        List<Integer> result = solution.largestDivisibleSubset(nums);
+        System.out.println(result); // Output: [1, 2, 4]
+    }
 }
