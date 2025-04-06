@@ -14,7 +14,6 @@ public class DS2874 {
         return res;
     }
 }
-
 class Main {
     public static void main(String[] args) {
         DS2874 ds2874 = new DS2874();

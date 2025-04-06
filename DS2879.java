@@ -14,7 +14,6 @@ public class DS2879 {
             return Math.max(0, maxTriplet);
         }
     }
-
     public static void main(String[] args) {
         DS2879 ds2879 = new DS2879();
         Solution solution = ds2879.new Solution();

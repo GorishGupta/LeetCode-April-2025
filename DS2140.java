@@ -16,7 +16,6 @@ public class DS2140 {
 
         return dp[0];
     }
-
     public static void main(String[] args) {
         DS2140 solution = new DS2140();
         int[][] questions = { { 3, 2 }, { 4, 3 }, { 4, 4 }, { 2, 5 } };

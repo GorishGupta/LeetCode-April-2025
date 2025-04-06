@@ -1,5 +1,5 @@
 public class DS1863 {
-    static class Solution {
+    public static class Solution {
         public int subsetXORSum(int[] nums) {
             int total = 0;
             for (int num : nums) {
