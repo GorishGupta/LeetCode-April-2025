@@ -15,8 +15,10 @@ public class DS2874 {
     }
 }
 
-public static void main(String[] args) {
-    DS2874 ds2874 = new DS2874();
-    int[] nums = { 1, 2, 3, 4, 5 };
-    System.out.println(ds2874.maximumTripletValue(nums)); // Output: 6
+class Main {
+    public static void main(String[] args) {
+        DS2874 ds2874 = new DS2874();
+        int[] nums = { 1, 2, 3, 4, 5 };
+        System.out.println(ds2874.maximumTripletValue(nums)); // Output: 6
+    }
 }
