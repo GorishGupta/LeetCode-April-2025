@@ -28,7 +28,6 @@ public class DS368 {
             return res;
         }
     }
-
     public static void main(String[] args) {
         DS368 ds368 = new DS368();
         Solution solution = ds368.new Solution();
