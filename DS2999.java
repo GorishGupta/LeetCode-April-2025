@@ -1,6 +1,5 @@
 public class DS2999 {
     class Solution {
-
         public long numberOfPowerfulInt(
                 long start,
                 long finish,
@@ -18,7 +17,6 @@ public class DS2999 {
             if (x.length() == s.length()) {
                 return x.compareTo(s) >= 0 ? 1 : 0;
             }
-
             String suffix = x.substring(x.length() - s.length());
             long count = 0;
             int preLen = x.length() - s.length();
