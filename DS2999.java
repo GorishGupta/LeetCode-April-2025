@@ -37,4 +37,14 @@ public class DS2999 {
             return count;
         }
     }
+
+    public static void main(String[] args) {
+        DS2999 ds = new DS2999();
+        Solution sol = ds.new Solution();
+        long start = 10;
+        long finish = 100;
+        int limit = 9;
+        String s = "123";
+        System.out.println(sol.numberOfPowerfulInt(start, finish, limit, s)); // Output: 0
+    }
 }
