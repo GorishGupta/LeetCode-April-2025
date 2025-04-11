@@ -17,7 +17,6 @@ public class DS2843 {
             }
             if (sum1 == sum2) {
                 c++;
-
             }
         }
         return c;
