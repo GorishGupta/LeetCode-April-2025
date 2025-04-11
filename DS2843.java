@@ -1,5 +1,4 @@
 public class DS2843 {
-
     public int countSymmetricIntegers(int low, int high) {
         int c = 0;
         for (int i = low; i <= high; i++) {
@@ -21,7 +20,13 @@ public class DS2843 {
 
             }
         }
-
         return c;
+    }
+
+    public static void main(String[] args) {
+        DS2843 ds = new DS2843();
+        int low = 1;
+        int high = 1000;
+        System.out.println(ds.countSymmetricIntegers(low, high)); // Output: 0
     }
 }
