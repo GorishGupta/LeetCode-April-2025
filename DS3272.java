@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class DS3272 {
     class Solution {
 
@@ -68,5 +70,13 @@ public class DS3272 {
             }
             return result;
         }
+    }
+
+    public static void main(String[] args) {
+        DS3272 ds = new DS3272();
+        Solution solution = ds.new Solution();
+        int n = 3;
+        int k = 2;
+        System.out.println(solution.countGoodIntegers(n, k)); // Output: 0
     }
 }
