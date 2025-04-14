@@ -16,4 +16,11 @@ public class DS1534 {
             return ct;
         }
     }
+
+    public static void main(String[] args) {
+        Solution sol = new DS1534().new Solution();
+        int[] arr = { 1, 2, 3, 4, 5 };
+        int a = 1, b = 1, c = 1;
+        System.out.println(sol.countGoodTriplets(arr, a, b, c)); // Output: 10
+    }
 }
