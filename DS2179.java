@@ -1,35 +1,34 @@
 class Solution {
     public long goodTriplets(int[] nums1, int[] nums2) {
-        int n=nums1.length;
-        int []pos = new int[n];
-        
-        FenwickTree ft = new FenwickTree(n+1);
-        
-        for(int i=0;i<n;i++)
-            pos[nums2[i]]=i;
-        
-        long []left=new long[n];
-        long []right = new long[n];
-        
-        for(int i=0;i<n;i++){
+        int n = nums1.length;
+        int[] pos = new int[n];
+
+        FenwickTree ft = new FenwickTree(n + 1);
+
+        for (int i = 0; i < n; i++)
+            pos[nums2[i]] = i;
+
+        long[] left = new long[n];
+        long[] right = new long[n];
+
+        for (int i = 0; i < n; i++) {
             int idx = pos[nums1[i]];
-            left[i] = ft.sum(idx-1);
-            ft.update(idx,1);
+            left[i] = ft.sum(idx - 1);
+            ft.update(idx, 1);
         }
-        
-        ft=new FenwickTree(n+1);
-        
-        for(int i=n-1;i>=0;i--){
+        ft = new FenwickTree(n + 1);
+
+        for (int i = n - 1; i >= 0; i--) {
             int idx = pos[nums1[i]];
-            right[i]= ft.sum(n+1)-ft.sum(idx);
-            ft.update(idx,1);
+            right[i] = ft.sum(n + 1) - ft.sum(idx);
+            ft.update(idx, 1);
         }
-        
-        long ans=0;
-        
-        for (int i=0;i<n;i++)
-            ans+= left[i]*right[i];
-        
+
+        long ans = 0;
+
+        for (int i = 0; i < n; i++)
+            ans += left[i] * right[i];
+
         return ans;
     }
 }
@@ -37,12 +36,12 @@ class Solution {
 class FenwickTree {
     int[] bit;
     int n;
-    
+
     FenwickTree(int n) {
         this.n = n;
         this.bit = new int[n + 2];
     }
-    
+
     public void update(int i, int val) {
         i++;
         while (i < bit.length) {
@@ -50,7 +49,7 @@ class FenwickTree {
             i += (i & (-i));
         }
     }
-    
+
     public int sum(int i) {
         int sum = 0;
         i++;
