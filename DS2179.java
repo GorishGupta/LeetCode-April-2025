@@ -2,15 +2,11 @@ class DS2179 {
     public long goodTriplets(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] pos = new int[n];
-
         FenwickTree ft = new FenwickTree(n + 1);
-
         for (int i = 0; i < n; i++)
             pos[nums2[i]] = i;
-
         long[] left = new long[n];
         long[] right = new long[n];
-
         for (int i = 0; i < n; i++) {
             int idx = pos[nums1[i]];
             left[i] = ft.sum(idx - 1);
@@ -23,12 +19,10 @@ class DS2179 {
             right[i] = ft.sum(n + 1) - ft.sum(idx);
             ft.update(idx, 1);
         }
-
         long ans = 0;
 
         for (int i = 0; i < n; i++)
             ans += left[i] * right[i];
-
         return ans;
     }
 }
