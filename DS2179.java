@@ -1,4 +1,4 @@
-class Solution {
+class DS2179 {
     public long goodTriplets(int[] nums1, int[] nums2) {
         int n = nums1.length;
         int[] pos = new int[n];
@@ -58,5 +58,12 @@ class FenwickTree {
             i -= (i & (-i));
         }
         return sum;
+    }
+
+    public static void main(String[] args) {
+        DS2179 solution = new DS2179();
+        int[] nums1 = { 1, 2, 3 };
+        int[] nums2 = { 3, 2, 1 };
+        System.out.println(solution.goodTriplets(nums1, nums2)); // Output: 0
     }
 }
