@@ -24,4 +24,11 @@ public class DS38 {
             return nextTerm.toString();
         }
     }
+
+    public static void main(String[] args) {
+        DS38 ds = new DS38();
+        Solution sol = ds.new Solution();
+        int n = 5; // Example input
+        System.out.println(sol.countAndSay(n)); // Output: "111221"
+    }
 }
