@@ -1,3 +1,6 @@
+
+// Removed package declaration to match the expected package structure
+import java.util.Scanner;
 import java.util.Arrays;
 
 class DS3375 {
