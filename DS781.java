@@ -15,6 +15,9 @@ public class DS781 {
     }
 
     public static void main(String[] args) {
-
+        DS781 ds781 = new DS781();
+        Solution solution = ds781.new Solution();
+        int[] answers = { 1, 1, 2 };
+        System.out.println(solution.numRabbits(answers)); // Output: 5
     }
 }
