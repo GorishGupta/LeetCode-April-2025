@@ -9,7 +9,6 @@ public class DS781 {
                     ans += answer + 1;
                 ++count[answer];
             }
-
             return ans;
         }
     }
