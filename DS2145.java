@@ -16,4 +16,8 @@ public class DS2145 {
             return (int) Math.max(0, validHigh - validLow + 1);
         }
     }
+
+    public static void main(String[] args) {
+
+    }
 }
