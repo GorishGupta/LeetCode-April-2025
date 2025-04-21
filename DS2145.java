@@ -18,6 +18,12 @@ public class DS2145 {
     }
 
     public static void main(String[] args) {
+        DS2145 ds2145 = new DS2145();
+        Solution solution = ds2145.new Solution();
+        int[] differences = { 1, -3, 4 };
+        int lower = 1;
+        int upper = 6;
+        System.out.println(solution.numberOfArrays(differences, lower, upper)); // Output: 2
 
     }
 }
