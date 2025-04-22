@@ -46,4 +46,12 @@ public class DS2338 {
             return fact[a] * factinv[b] % M * factinv[a - b] % M;
         }
     }
+
+    public static void main(String[] args) {
+        DS2338 ds2338 = new DS2338();
+        Solution solution = ds2338.new Solution();
+        int n = 5;
+        int maxValue = 3;
+        System.out.println(solution.idealArrays(n, maxValue)); // Output: 10
+    }
 }
