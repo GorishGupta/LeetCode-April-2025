@@ -3,49 +3,47 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DS2799 {
-    class Solution {
-        public int countCompleteSubarrays(int[] nums) {
-            Set<Integer> set = new HashSet<>();
+    public int countCompleteSubarrays(int[] nums) {
+        Set<Integer> set = new HashSet<>();
 
-            for (int val : nums) {
-                set.add(val);
-            }
-
-            int k = set.size();
-
-            int i = 0;
-
-            int j = 0;
-
-            int ans = 0;
-
-            HashMap<Integer, Integer> map = new HashMap<>();
-
-            while (j < nums.length) {
-
-                map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
-
-                while (map.size() == k) {
-
-                    ans += (nums.length - j);
-
-                    map.put(nums[i], map.get(nums[i]) - 1);
-
-                    if (map.get(nums[i]) == 0) {
-                        map.remove(nums[i]);
-                    }
-                    i++;
-                }
-                j++;
-            }
-
-            return ans;
+        for (int val : nums) {
+            set.add(val);
         }
+
+        int k = set.size();
+
+        int i = 0;
+
+        int j = 0;
+
+        int ans = 0;
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        while (j < nums.length) {
+
+            map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
+
+            while (map.size() == k) {
+
+                ans += (nums.length - j);
+
+                map.put(nums[i], map.get(nums[i]) - 1);
+
+                if (map.get(nums[i]) == 0) {
+                    map.remove(nums[i]);
+                }
+                i++;
+            }
+            j++;
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
-        Solution solution = new DS2799().new Solution();
+        DS2799 newDs2799 = new DS2799();
         int[] nums = { 1, 2, 1, 2, 3 };
-        System.out.println(solution.countCompleteSubarrays(nums)); // Output: 10
+        System.out.println(newDs2799.countCompleteSubarrays(nums)); // Output: 10
     }
 }
