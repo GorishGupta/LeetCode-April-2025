@@ -42,4 +42,10 @@ public class DS2799 {
             return ans;
         }
     }
+
+    public static void main(String[] args) {
+        Solution solution = new DS2799().new Solution();
+        int[] nums = { 1, 2, 1, 2, 3 };
+        System.out.println(solution.countCompleteSubarrays(nums)); // Output: 10
+    }
 }
