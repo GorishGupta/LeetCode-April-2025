@@ -29,4 +29,13 @@ public class DS2845 {
             return ans;
         }
     }
+
+    public static void main(String[] args) {
+        DS2845 newDs2845 = new DS2845();
+        Solution solution = newDs2845.new Solution();
+        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        int modulo = 3;
+        int k = 1;
+        System.out.println(solution.countInterestingSubarrays(nums, modulo, k)); // Output: 10
+    }
 }
