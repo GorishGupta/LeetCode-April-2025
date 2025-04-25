@@ -1,3 +1,6 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class DS2845 {
     class Solution {
         public long countInterestingSubarrays(List<Integer> nums, int modulo, int k) {
