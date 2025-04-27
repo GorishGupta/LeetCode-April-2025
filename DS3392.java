@@ -10,4 +10,11 @@ public class DS3392 {
             return count;
         }
     }
+
+    public static void main(String[] args) {
+        DS3392 newDs3392 = new DS3392();
+        Solution solution = newDs3392.new Solution();
+        int[] nums = { 1, 3, 5, 2, 7, 5 };
+        System.out.println(solution.countSubarrays(nums)); // Output: 14
+    }
 }
