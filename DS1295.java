@@ -15,6 +15,9 @@ public class DS1295 {
     }
 
     public static void main(String[] args) {
+        DS1295 ds1295 = new DS1295();
+        int[] nums = { 12, 345, 2, 6, 7896 };
+        System.out.println(ds1295.findNumbers(nums)); // Output: 2
 
     }
 }
